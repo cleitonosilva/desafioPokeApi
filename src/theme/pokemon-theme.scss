@@ -1,0 +1,42 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$pokemon-palette: (
+  50: #f7e9e9,
+  100: #ecc9c8,
+  200: #dfa5a4,
+  300: #d2817f,
+  400: #c86663,
+  500: #be4b48,
+  600: #b84441,
+  700: #af3b38,
+  800: #a73330,
+  900: #992321,
+
+ contrast: (
+   50: rgba(black, 0.87),
+   100: rgba(black, 0.87),
+   200: rgba(black, 0.87),
+   300: white,
+   400: rgba(black, 0.87)
+   // ... continues to 900
+ )
+);
+
+$pokemon-primary: mat.define-palette($pokemon-palette, 500);
+$pokemon-accent: mat.define-palette($pokemon-palette, 800);
+$pokemon-warn: mat.define-palette(mat.$red-palette);
+
+$pokemon-theme: mat.define-light-theme((
+  color: (
+    primary: $pokemon-primary,
+    accent: $pokemon-accent,
+    warn: $pokemon-warn,
+  )
+));
+
+@include mat.all-component-themes($pokemon-theme);
+
+
+

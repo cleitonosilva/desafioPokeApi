@@ -1,0 +1,49 @@
+@use '../../theme/styles/variables' as var;
+
+.pokedex {
+  background-color: var.$red;
+  height: 300px;
+  &-logo {
+    margin: 0;
+    position: relative;
+    height: 300px;
+    text-align: center;
+    img {
+      position: absolute;
+      margin: auto;
+      top: 50px;
+      left: 0;
+      right: 0;
+      max-width: 100%;
+      -webkit-animation: slide-in-bck-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	    animation: slide-in-bck-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+  }
+}
+
+@-webkit-keyframes slide-in-bck-top {
+  0% {
+    -webkit-transform: translateZ(700px) translateY(-300px);
+    transform: translateZ(700px) translateY(-300px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bck-top {
+  0% {
+    -webkit-transform: translateZ(700px) translateY(-300px);
+    transform: translateZ(700px) translateY(-300px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+

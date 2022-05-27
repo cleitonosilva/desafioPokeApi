@@ -1,0 +1,107 @@
+@use '../../theme/styles/variables' as var;
+@use '../../theme/styles/mixins' as mixins;
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: rgb(0 0 0 / 30%) 1px 1px 8px;
+  border-radius: 10px;
+  width: 90vw;
+  margin: auto;
+  padding: var.$space-xl;
+}
+
+.pokemon {
+  &-list {
+    padding: 120px 0;
+  }
+
+  &-search {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    &-btn {
+      margin-top: 5px;
+      width: 150px;
+      border: none;
+      padding: 18px;
+      background: var.$primary;
+
+      color: var.$light;
+      font-size: var.$font-md;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      &:hover {
+        background: var.$red;
+        transition: 0.8s;
+      }
+
+    }
+
+    &__input {
+      width: 100%;
+    }
+  }
+
+  &-fav-checkbox {
+    font-size: var.$font-lg;
+    margin: 25px 0;
+  }
+
+  &-table {
+    width: 100%;
+
+    &-th,
+    &-td {
+      width: 200px;
+      text-align: left;
+      border-color: var.$primary-light;
+      padding-right: 30px;
+    }
+
+    &-th {
+      font-size: var.$font-xl;
+    }
+
+    &-td {
+      font-size: var.$font-lg;
+
+      &__type {
+        margin-right: var.$space-xxl;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+    }
+
+    &-fav {
+      cursor: pointer;
+      color: red;
+    }
+  }
+
+  @include mixins.for-medium-screen {
+    &-table {
+      &-container {
+      overflow: auto;
+      }
+    }
+  }
+
+  @include mixins.for-phone {
+    &-list {
+      padding: 50px 0;
+    }
+
+    &-search {
+      display: block;
+
+      &-btn {
+        width: 100px;
+        padding: 10px;
+        margin: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+.pokemon {
+  &__type {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 7px;
+    line-height: 18px;
+    max-width: 110px;
+    width: 38%;
+    letter-spacing: 1px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+
+    &--grass {
+      background: #9bcc50;
+      color: #212121;
+    }
+
+    &--fighting {
+      background: #B07B5F;
+      color: #fff;
+    }
+
+    &--poison {
+      background: #b97fc9;
+      color: #fff;
+    }
+
+    &--bug {
+      background: #729f3f;
+      color: #fff;
+    }
+
+    &--dark {
+      background: #707070;
+      color: #fff;
+    }
+
+    &--dragon {
+      background: #53a4cf;
+      color: #fff;
+    }
+
+    &--eletric {
+      background: #eed535;
+      color: #212121;
+    }
+
+    &--fairy {
+      background: #d56723;
+      color: #fff;
+    }
+
+    &--fire {
+      background: #B1251D;
+      color: #fff;
+    }
+
+    &--flying {
+      background: #3dc7ef;
+      color: #212121;
+    }
+
+    &--ghost {
+      background: #7b62a3;
+      color: #fff;
+    }
+
+    &--ground {
+      background: #f7de3f;
+      color: #212121;
+    }
+
+    &--ice {
+      background: #51c4e7;
+      color: #212121;
+    }
+
+    &--normal {
+      background: #a4acaf;
+      color: #212121;
+    }
+
+    &--psychic {
+      background: #f366b9;
+      color: #fff;
+    }
+
+    &--rock {
+      background: #a38c21;
+      color: #fff;
+    }
+
+    &--steel {
+      background: #9eb7b8;
+      color: #212121;
+    }
+
+    &--water {
+      background: #4592c4;
+      color: #fff;
+    }
+
+    &--electric {
+      background: #E8C552;
+      color: #fff;
+    }
+  }
+}
